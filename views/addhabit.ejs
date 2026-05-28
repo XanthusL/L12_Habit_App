@@ -27,6 +27,30 @@
             <label for="startDate">Start Date:</label>
             <input type="date" id="startDate" name="startDate" required>
         </div>
+        <div>
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate">
+        </div>
+        <div>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category">
+        </div>
+        <div>
+            <label for="reminderTime">Reminder Time:</label>
+            <input type="time" id="reminderTime" name="reminderTime">
+        </div>
+        <div>
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="active">Active</option>
+                <option value="completed">Completed</option>
+                <option value="skipped">Skipped</option>
+            </select>
+        </div>
+        <div>
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes"></textarea>
+        </div>
         <button type="submit">Add Habit</button>
     </form>
     

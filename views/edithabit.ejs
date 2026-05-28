@@ -8,6 +8,51 @@
     <title>Edit Habit</title>
 </head>
 <body>
+    <%- include('partials/header') %>
+    <h1>Edit Habit</h1>
+    <form action="/edithabit/<%= habit.index %>" method="POST">
+        <div>
+            <label for="habitName">Habit Name:</label>
+            <input type="text" id="habitName" name="habitName" value="<%= habit.name %>" required>
+        </div>
+        <div>
+            <label for="frequency">Frequency:</label>
+            <select id="frequency" name="frequency" required>
+                <option value="daily" <%= habit.frequency === 'daily' ? 'selected' : '' %>>Daily</option>
+                <option value="weekly" <%= habit.frequency === 'weekly' ? 'selected' : '' %>>Weekly</option>
+                <option value="monthly" <%= habit.frequency === 'monthly' ? 'selected' : '' %>>Monthly</option>
+            </select>
+        </div>
+        <div>
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" value="<%= habit.startDate %>" required>
+        </div>
+        <div>
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate" value="<%= habit.endDate %>">
+        </div>
+        <div>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" value="<%= habit.category %>">
+        </div>
+        <div>
+            <label for="reminderTime">Reminder Time:</label>
+            <input type="time" id="reminderTime" name="reminderTime" value="<%= habit.reminderTime %>">
+        </div>
+        <div>
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="active" <%= habit.status === 'active' ? 'selected' : '' %>>Active</option>
+                <option value="completed" <%= habit.status === 'completed' ? 'selected' : '' %>>Completed</option>
+                <option value="skipped" <%= habit.status === 'skipped' ? 'selected' : '' %>>Skipped</option>
+            </select>
+        </div>
+        <div>
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes"><%= habit.notes %></textarea>
+        </div>
+        <button type="submit">Update Habit</button>
+    </form>
     
 </body>
 </html>

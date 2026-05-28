@@ -8,6 +8,15 @@
     <title>View Habit</title>
 </head>
 <body>
-    
+    <%- include('partials/header') %>
+    <h1>View Habit</h1>
+    <p><strong>Name:</strong> <%= habit.name %></p>
+    <p><strong>Frequency:</strong> <%= habit.frequency %></p>
+    <p><strong>Start Date:</strong> <%= habit.startDate %></p>
+    <p><strong>End Date:</strong> <%= habit.endDate %></p>
+    <p><strong>Category:</strong> <%= habit.category %></p>
+    <p><strong>Reminder Time:</strong> <%= habit.reminderTime %></p>
+    <p><strong>Status:</strong> <%= habit.status %></p>
+    <p><strong>Notes:</strong> <%= habit.notes %></p>
 </body>
 </html>
